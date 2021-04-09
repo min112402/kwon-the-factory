@@ -1,3 +1,13 @@
+.landingPage{
+  height: inherit;
+  overflow: hidden;
+}
+
+.landingWrapper{
+  background-color: white;
+  height: 46.8vw;
+}
+
 .mobile{
   display: none;
 }
@@ -94,6 +104,12 @@
 }
 
 @media (max-width: 1024px) {
+  .landingPage{
+    overflow: scroll;
+  }
+  .landingWrapper{
+    height: auto;
+  }
   .backgroundWrapper, .manWrapper{
     display: none;
   }

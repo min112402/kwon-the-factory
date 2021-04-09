@@ -26,7 +26,7 @@ class App extends React.Component {
           <title>{TITLE}</title>
        	  <meta property="og:site_name" content={TITLE}/>
           <meta property="og:description" content={TITLE}/>
-	</Helmet>
+	     </Helmet>
         <Nav />
           <div className="contentContainer">
             <Switch>
