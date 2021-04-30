@@ -42,14 +42,14 @@ class PortfolioDetail extends React.Component {
 
 
     render(){
-        const details = _.map(this.state.images,(detail=> <img src = {detail.image}/>))
+        const details = _.map(this.state.images,(detail=> <img src = {detail.image} alt=""/>))
         const detailText = typeof this.state.detail === 'string' ? this.state.detail.split('\n').map( line => {return (<p>{line}<br/></p>)}) : ""
         return(
             <div className="itemDetailContainerWrapper">
                 <div className="itemDetailContainer">
                     <div className="itemDetail">
                         <div className ="detailImage">
-                            <img src={this.state.image}></img>
+                            <img src={this.state.image} alt=""></img>
                         </div>
                         <div className = "info">
                             <div className="name">{this.state.title} </div>

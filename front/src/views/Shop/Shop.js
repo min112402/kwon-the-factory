@@ -1,5 +1,5 @@
 import React from "react"
-import { Route,Link } from "react-router-dom"
+import { Route } from "react-router-dom"
 import ItemList from "./ItemList"
 import ItemDetail from "./ItemDetail"
 import Footer from "../Footer/Footer.js"
@@ -13,7 +13,7 @@ function Shop ({match}) {
                 <Route path={`${match.path}/:name`} component={ItemDetail} />
             </div>
             <Footer/>
-        </div>        
+        </div>
     )
 
 }

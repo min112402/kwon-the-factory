@@ -1,5 +1,4 @@
 import React from 'react'
-import {ParallaxProvider, Parallax} from 'react-scroll-parallax'
 import "./LandingPage.css"
 import background from "../../background.png"
 import people from "../../people.png"
@@ -32,20 +31,21 @@ class LandingPage extends React.Component {
       let phone = document.getElementById("phone")
       let ringing = document.getElementById("ringing")
       let loop = setInterval(()=>{
-            if(this.state.y == -1){
+              var ringaring = setTimeout( () => {
+                if(this.state.y === -1){
+                  return;
+                }
+                phone.style.display = 'block'
+                ringing.style.display = 'none'
+            }, 1500)
+            if(this.state.y === -1){
               clearInterval(loop)
               clearTimeout(ringaring)
               return;
             }
             phone.style.display = 'none'
             ringing.style.display = 'block'
-            var ringaring = setTimeout( () => {
-                if(this.state.y == -1){
-                  return;
-                }
-                phone.style.display = 'block'
-                ringing.style.display = 'none'
-            }, 1500)
+
 
         }, 2500)
     }
@@ -82,10 +82,10 @@ class LandingPage extends React.Component {
         setTimeout(()=> {
           logo.style.display = 'block'
         }, 2400)
-        this.state.y = -1
+        this.setState((state)=>({y: - 1}))
         document.removeEventListener('wheel', this.scrollAction)
       }else if(this.state.y <= -9.75){
-        this.state.y = -9.75
+        this.setState((state)=>({y: - 9.75}))
         hand.style.display = 'none'
         grass.style.display = 'block'
       }else{

@@ -26,7 +26,7 @@ function Nav() {
             wink.style.display = 'none';
           }
           isWink = !isWink;
-          if(cnt==2){
+          if(cnt===2){
             setIsModalOn(true)
             cnt=0;
           }else setIsModalOn(false);
@@ -55,7 +55,7 @@ function Nav() {
                     <Link to="/shop" style={{ textDecoration: 'none' }}onClick={closeNavbar}>SHOP</Link>
                     <Link to="/portfolio" style={{ textDecoration: 'none' }}onClick={closeNavbar}>PORTFOLIO</Link>
                     <Link to="/contact" style={{ textDecoration: 'none' }}  onClick={closeNavbar}>CONTACT</Link>
-                    <a href="#" className="icon" onClick={toggleNavbar}>
+                    <a href="/" className="icon" onClick={toggleNavbar}>
                         <i className="fa fa-bars"></i>
                     </a>
                 </div>

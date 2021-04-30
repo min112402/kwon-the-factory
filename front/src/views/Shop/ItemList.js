@@ -49,9 +49,9 @@ class ItemList extends React.Component {
         return(
             <div>
                 <div className="itemListNav">
-                    <img src={date}  id="production_date" onClick = {() => this.handleSort('production_date')} ></img>
-                    <img src={price} id="price" onClick = {() => this.handleSort('price')} ></img>
-                    <img src={name} id="name" onClick = {() => this.handleSort('name')}></img>
+                    <img src={date} alt=""  id="production_date" onClick = {() => this.handleSort('production_date')} ></img>
+                    <img src={price} alt="" id="price" onClick = {() => this.handleSort('price')} ></img>
+                    <img src={name} alt="" id="name" onClick = {() => this.handleSort('name')}></img>
                 </div>
                 <div className="itemContainerWrapper">
                     <div className="itemContainer">
@@ -59,8 +59,8 @@ class ItemList extends React.Component {
                             <Link to= {this.props.match.path + "/"+ item.name} key = {item.id}>
                                 <div className="item" >
                                     <div className="frameWrapper">
-                                        <img className="frame" src={frame4}/>
-                                        <img className="thumbnail" src = {item.thumbnail}  />
+                                        <img className="frame" src={frame4} alt=""/>
+                                        <img className="thumbnail" src = {item.thumbnail} alt=""  />
                                     </div>
                                     <div className="info">
                                         {item.name}

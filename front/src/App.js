@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import './App.css';
 import {BrowserRouter, Route, Switch } from "react-router-dom"
 import { Helmet } from 'react-helmet'
@@ -10,7 +10,6 @@ import Contact from './views/Contact/Contact';
 
 import Nav from './views/Nav/Nav'
 import ScrollToTop from './ScrollToTop'
-import ogImage from './img2.png'
 
 const TITLE = "KWON_theFACT0RY"
 
