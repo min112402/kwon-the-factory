@@ -2,8 +2,7 @@ import React from 'react'
 import './ItemList.css'
 import {Link}  from "react-router-dom"
 import _ from 'lodash'
-import frame4 from "../../frame4.png"
-import frame2 from "../../frame2.png"
+import frame4 from "../../images/shop/frame4.png"
 import name from "../../images/buttons/name.png"
 import date from "../../images/buttons/date.png"
 import price from "../../images/buttons/price.png"

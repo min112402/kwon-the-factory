@@ -1,15 +1,16 @@
 import React from 'react'
+import Footer from "../Footer/Footer.js"
 import "./LandingPage.css"
-import background from "../../background.png"
-import people from "../../people.png"
-import man1 from "../../man1.png"
-import man2 from "../../man2.png"
-import hand from "../../hand.png"
-import phone from "../../phone.png"
-import ringing from "../../ringing.png"
-import logo from "../../landingPageLogo.png"
-import grass from "../../screen.png"
-import mobile from "../../newMainImage.jpeg"
+import background from "../../images/landing/background.png"
+import people from "../../images/landing/people.png"
+import man1 from "../../images/landing/man1.png"
+import man2 from "../../images/landing/man2.png"
+import hand from "../../images/landing/hand.png"
+import phone from "../../images/landing/phone.png"
+import ringing from "../../images/landing/ringing.png"
+import logo from "../../images/landing/landingPageLogo.png"
+import grass from "../../images/landing/screen.png"
+import mobile from "../../images/landing/newMainImage.jpeg"
 
 class LandingPage extends React.Component {
     constructor(props){
@@ -98,22 +99,25 @@ class LandingPage extends React.Component {
     render(){
         return (
             <div className="landingPage">
-                <div className="mobileWrapper">
-                    <img className="mobile" src={mobile} alt=""></img>
+                <div className="landingWrapper">
+                  <div className="mobileWrapper">
+                      <img className="mobile" src={mobile} alt=""></img>
+                  </div>
+                  <div className="backgroundWrapper" onLoad={this.ringring}>
+                      <img className="background2" id="bg2" src={people} alt=""></img>
+                      <img className="background" src={background} alt=""></img>
+                      <img className="hand" id="hand" src={hand} alt=""></img>
+                      <img className="grass" id="grass" src={grass} alt=""></img>
+                      <img className="phone" id="phone" src={phone} alt=""></img>
+                      <img className="ringing" id="ringing" src={ringing} alt=""></img>
+                  </div>
+                  <div className="manWrapper">
+                      <img className="man1" id="man1" src={man1} alt="" ></img>
+                      <img className="man2" id="man2" src={man2} alt="" ></img>
+                      <img className="mainlogo" id="mainlogo" src={logo} alt="" ></img>
+                  </div>
                 </div>
-                <div className="backgroundWrapper" onLoad={this.ringring}>
-                    <img className="background2" id="bg2" src={people} alt=""></img>
-                    <img className="background" src={background} alt=""></img>
-                    <img className="hand" id="hand" src={hand} alt=""></img>
-                    <img className="grass" id="grass" src={grass} alt=""></img>
-                    <img className="phone" id="phone" src={phone} alt=""></img>
-                    <img className="ringing" id="ringing" src={ringing} alt=""></img>
-                </div>
-                <div className="manWrapper">
-                    <img className="man1" id="man1" src={man1} alt="" ></img>
-                    <img className="man2" id="man2" src={man2} alt="" ></img>
-                    <img className="mainlogo" id="mainlogo" src={logo} alt="" ></img>
-                </div>
+                <Footer />
             </div>
         )
     }

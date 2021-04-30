@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 import {Link} from "react-router-dom"
 import './Nav.css'
-import logo from "../../logo.png"
-import img1 from "../../wink.png"
-import img2 from "../../img2.png"
-import { render } from '@testing-library/react'
+import logo from "../../images/nav/logo.png"
+import img1 from "../../images/nav/wink.png"
+import img2 from "../../images/nav/img2.png"
 import Easter from "./Easter"
-import light from "../../light.png"
 
 function Nav() {
         var cnt = 0;

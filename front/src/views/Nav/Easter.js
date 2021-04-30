@@ -1,8 +1,8 @@
 import React from 'react'
 import './Nav.css'
-import jh from "../../jh.jpg"
-import hj from "../../hj.jpg"
-import profile from "../../profile.png"
+import jh from "../../images/profile/jh.jpg"
+import hj from "../../images/profile/hj.jpg"
+import profile from "../../images/profile/profile.png"
 
 class Easter extends React.Component{
   constructor(props){

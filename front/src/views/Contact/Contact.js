@@ -1,6 +1,5 @@
 import React from 'react'
-import Footer from "../Footer/Footer.js"
-import contactBackground from "../../contactBackground.jpeg"
+import contactBackground from "../../images/contactBackground.jpeg"
 import "./Contact.css"
 export default function Contact() {
     return (
