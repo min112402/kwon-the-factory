@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './Footer.css'
 import { Link } from "react-router-dom"
-import logo from "../../logo-fit.png"
+import logo from "../../images/footer/logo-fit.png"
 const ColoredLine = ({ color }) => (
     <hr
       style={{

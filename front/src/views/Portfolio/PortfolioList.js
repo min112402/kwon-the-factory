@@ -35,8 +35,8 @@ class PortfolioList extends React.Component {
         return(
             <div className="listWrapper">
                 <div className="itemListNav">
-                    <img src={date} onClick = {() => this.handleSort('production_date')} ></img>
-                    <img src={title} onClick = {() => this.handleSort('title')} ></img>
+                    <img src={date} alt="" onClick = {() => this.handleSort('production_date')} ></img>
+                    <img src={title} alt="" onClick = {() => this.handleSort('title')} ></img>
                 </div>
                 <div className="itemContainerWrapper">
                     <div className="itemContainer">
@@ -44,7 +44,7 @@ class PortfolioList extends React.Component {
                             <Link to= {this.props.match.path + "/"+ portfolio.title} key = {portfolio.id}>
                                 <div className="item" >
                                     <div className="frameWrapper">
-                                        <img className="thumbnail" src = {portfolio.thumbnail}  />
+                                        <img className="thumbnail" src = {portfolio.thumbnail} alt="" />
                                     </div>
                                     <div className="info">
                                         {portfolio.title}

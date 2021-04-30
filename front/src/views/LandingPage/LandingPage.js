@@ -1,17 +1,16 @@
 import React from 'react'
-import {ParallaxProvider, Parallax} from 'react-scroll-parallax'
 import Footer from "../Footer/Footer.js"
 import "./LandingPage.css"
-import background from "../../background.png"
-import people from "../../people.png"
-import man1 from "../../man1.png"
-import man2 from "../../man2.png"
-import hand from "../../hand.png"
-import phone from "../../phone.png"
-import ringing from "../../ringing.png"
-import logo from "../../landingPageLogo.png"
-import grass from "../../screen.png"
-import mobile from "../../newMainImage.jpeg"
+import background from "../../images/landing/background.png"
+import people from "../../images/landing/people.png"
+import man1 from "../../images/landing/man1.png"
+import man2 from "../../images/landing/man2.png"
+import hand from "../../images/landing/hand.png"
+import phone from "../../images/landing/phone.png"
+import ringing from "../../images/landing/ringing.png"
+import logo from "../../images/landing/landingPageLogo.png"
+import grass from "../../images/landing/screen.png"
+import mobile from "../../images/landing/newMainImage.jpeg"
 
 class LandingPage extends React.Component {
     constructor(props){
@@ -33,20 +32,21 @@ class LandingPage extends React.Component {
       let phone = document.getElementById("phone")
       let ringing = document.getElementById("ringing")
       let loop = setInterval(()=>{
-            if(this.state.y == -1){
+              var ringaring = setTimeout( () => {
+                if(this.state.y === -1){
+                  return;
+                }
+                phone.style.display = 'block'
+                ringing.style.display = 'none'
+            }, 1500)
+            if(this.state.y === -1){
               clearInterval(loop)
               clearTimeout(ringaring)
               return;
             }
             phone.style.display = 'none'
             ringing.style.display = 'block'
-            var ringaring = setTimeout( () => {
-                if(this.state.y == -1){
-                  return;
-                }
-                phone.style.display = 'block'
-                ringing.style.display = 'none'
-            }, 1500)
+
 
         }, 2500)
     }
@@ -83,10 +83,10 @@ class LandingPage extends React.Component {
         setTimeout(()=> {
           logo.style.display = 'block'
         }, 2400)
-        this.state.y = -1
+        this.setState((state)=>({y: - 1}))
         document.removeEventListener('wheel', this.scrollAction)
       }else if(this.state.y <= -9.75){
-        this.state.y = -9.75
+        this.setState((state)=>({y: - 9.75}))
         hand.style.display = 'none'
         grass.style.display = 'block'
       }else{

@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 import {Link} from "react-router-dom"
 import './Nav.css'
-import logo from "../../logo.png"
-import img1 from "../../wink.png"
-import img2 from "../../img2.png"
-import { render } from '@testing-library/react'
+import logo from "../../images/nav/logo.png"
+import img1 from "../../images/nav/wink.png"
+import img2 from "../../images/nav/img2.png"
 import Easter from "./Easter"
-import light from "../../light.png"
 
 function Nav() {
         var cnt = 0;
@@ -26,7 +24,7 @@ function Nav() {
             wink.style.display = 'none';
           }
           isWink = !isWink;
-          if(cnt==2){
+          if(cnt===2){
             setIsModalOn(true)
             cnt=0;
           }else setIsModalOn(false);
@@ -55,7 +53,7 @@ function Nav() {
                     <Link to="/shop" style={{ textDecoration: 'none' }}onClick={closeNavbar}>SHOP</Link>
                     <Link to="/portfolio" style={{ textDecoration: 'none' }}onClick={closeNavbar}>PORTFOLIO</Link>
                     <Link to="/contact" style={{ textDecoration: 'none' }}  onClick={closeNavbar}>CONTACT</Link>
-                    <a href="#" className="icon" onClick={toggleNavbar}>
+                    <a href="/" className="icon" onClick={toggleNavbar}>
                         <i className="fa fa-bars"></i>
                     </a>
                 </div>
